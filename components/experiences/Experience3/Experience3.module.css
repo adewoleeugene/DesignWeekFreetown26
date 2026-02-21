@@ -1,0 +1,80 @@
+/* ===================================================
+   Experience 3 — The Maker
+   =================================================== */
+
+.paperTexture {
+  background-color: #F5F0E8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+@keyframes buildFromLeft {
+  from { opacity: 0; transform: translateX(-40px) rotate(-2deg); }
+  70% { transform: translateX(4px) rotate(0.3deg); }
+  to { opacity: 1; transform: translateX(0) rotate(0); }
+}
+
+@keyframes buildFromBottom {
+  from { opacity: 0; transform: translateY(30px) rotate(1deg); }
+  70% { transform: translateY(-3px) rotate(-0.2deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+.buildLeft { opacity: 0; animation: buildFromLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.buildBottom { opacity: 0; animation: buildFromBottom 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+.delay1 { animation-delay: 0.1s; }
+.delay2 { animation-delay: 0.2s; }
+.delay3 { animation-delay: 0.6s; }
+
+.countdownTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #C75B3A;
+  color: #FAF7F2;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 3px 8px rgba(199, 91, 58, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.countdownTile:hover {
+  transform: translateY(-2px);
+}
+
+.inputField {
+  width: 100%;
+  border-bottom: 1px solid rgba(44, 26, 14, 0.15);
+  background: transparent;
+  padding: 0 0 0.75rem 0;
+  font-size: 0.875rem;
+  color: #2C1A0E;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputField::placeholder { color: rgba(44, 26, 14, 0.25); }
+.inputField:focus { border-color: #C75B3A; }
+
+.submitBtn {
+  background: #C75B3A;
+  color: #FAF7F2;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover { background: #b04e30; }
+.submitBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.successCard {
+  background: rgba(199, 91, 58, 0.05);
+  border: 1px solid rgba(199, 91, 58, 0.2);
+  padding: 1.25rem 1.5rem;
+}
