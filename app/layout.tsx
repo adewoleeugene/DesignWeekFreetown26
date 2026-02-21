@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Cedarville_Cursive } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.variable} ${cedarville.variable} ${airnt.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
