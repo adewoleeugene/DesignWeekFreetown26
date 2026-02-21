@@ -9,6 +9,7 @@ export default function Experience1() {
 
   return (
     <section className="min-h-screen w-full flex flex-col">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col flex-1 relative">
       {/* Top bar */}
       <nav className="flex justify-between items-center px-6 sm:px-10 md:px-12 lg:px-16 py-6 animate-[fadeIn_0.6s_ease-out_both]">
         <span className="text-xs font-bold tracking-[0.2em] uppercase text-black/60">
@@ -113,6 +114,7 @@ export default function Experience1() {
             </form>
           )}
         </div>
+      </div>
       </div>
     </section>
   );
