@@ -24,6 +24,11 @@ const airnt = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://designweekfreetown.com"
+      : "http://localhost:3000"
+  ),
   title: "Design Week Freetown 2026 | Designing Sustainable Futures",
   description:
     "Design Week Freetown 2026 — Where Tech Meets Heritage. May 06-09, 2026. Freetown, Sierra Leone.",
